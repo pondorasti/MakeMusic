@@ -26,7 +26,7 @@ struct Constant {
                                         Message(text: "#BETTER", timeStamp: 17, username: "chicagoStyleHotdog"),
                                         Message(text: "#FASTER", timeStamp: 19, username: "iLoveKanye"),
                                         Message(text: "#STRONGER", timeStamp: 20, username: "sw0leAF"),
-                                        Message(text: "poof", timeStamp: 50, username: "88rising")]
+                                        Message(text: "#poof", timeStamp: 50, username: "88rising")]
     }
     
     static let countDown: Int = 20
