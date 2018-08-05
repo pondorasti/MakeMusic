@@ -16,32 +16,44 @@ class MusicTImerViewController: UIViewController {
     @IBOutlet weak var musicTitle: UILabel!
     @IBOutlet weak var musicArtist: UILabel!
     
-    @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var timerBar: UIView!
     
     @IBOutlet weak var timerBarTopConstraint: NSLayoutConstraint!
     
+    var timer = Timer()
+    var seconds = Constant.countDown
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         blur(imageView: bgImage)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         
-        setTimerBar(progress: 0.5)
-        
-        
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        TagView(with: "Alex", in: self)
     }
     
-    func setTimerBar(progress: CGFloat) {
+    @objc func updateTimer() {
+        if seconds < 1 {
+            timer.invalidate()
+            //TODO: perform segue to next screen
+        } else {
+            seconds -= 1
+            if seconds == Constant.countDown - 1 {
+                setTimerBar(0.0)
+            }
+            timerLabel.text = TimeInterval(seconds).toString()
+        }
+    }
+
+    func setTimerBar(_ progress: CGFloat) {
         if progress <=  1 {
-            let spacing = view.frame.height * progress
-            timerBarTopConstraint.constant = spacing
+            let spacing = view.frame.height * (1 - progress)
+            self.timerBarTopConstraint.constant = spacing
+            UIView.animate(withDuration: TimeInterval(Constant.countDown)) {
+                self.view.layoutIfNeeded()
+            }
         }
     }
     
@@ -61,15 +73,6 @@ class MusicTImerViewController: UIViewController {
         let processedImage = UIImage(cgImage: cgimg!)
         imageView.image = processedImage
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+

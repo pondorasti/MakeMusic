@@ -13,6 +13,8 @@
 		C55D83062116B60300FE9F53 /* MusicTImerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83052116B60300FE9F53 /* MusicTImerViewController.swift */; };
 		C55D83082116B60800FE9F53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83072116B60800FE9F53 /* LoginViewController.swift */; };
 		C55D830A2116B60E00FE9F53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55D83092116B60E00FE9F53 /* LaunchScreen.storyboard */; };
+		C55D830C2116C6D600FE9F53 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D830B2116C6D600FE9F53 /* Extensions.swift */; };
+		C55D83102116C81A00FE9F53 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D830F2116C81A00FE9F53 /* TagView.swift */; };
 		C566FF11211679F400560379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566FF10211679F400560379 /* AppDelegate.swift */; };
 		C566FF13211679F400560379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566FF12211679F400560379 /* ViewController.swift */; };
 		C566FF18211679F500560379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C566FF17211679F500560379 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 		C55D83052116B60300FE9F53 /* MusicTImerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTImerViewController.swift; sourceTree = "<group>"; };
 		C55D83072116B60800FE9F53 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C55D83092116B60E00FE9F53 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C55D830B2116C6D600FE9F53 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C55D830F2116C81A00FE9F53 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		C566FF0D211679F400560379 /* MakeMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C566FF10211679F400560379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C566FF12211679F400560379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			children = (
 				C566FF242116A0E100560379 /* Constants.swift */,
 				C566FF2221169F2C00560379 /* MusicService.swift */,
+				C55D830B2116C6D600FE9F53 /* Extensions.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 				C55D83032116B5FD00FE9F53 /* IBDesignables.swift */,
 				C55D83012116B5D700FE9F53 /* Main.storyboard */,
 				C55D83092116B60E00FE9F53 /* LaunchScreen.storyboard */,
+				C55D830F2116C81A00FE9F53 /* TagView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -252,10 +258,12 @@
 				C55D83082116B60800FE9F53 /* LoginViewController.swift in Sources */,
 				C566FF13211679F400560379 /* ViewController.swift in Sources */,
 				C566FF2321169F2C00560379 /* MusicService.swift in Sources */,
+				C55D830C2116C6D600FE9F53 /* Extensions.swift in Sources */,
 				C55D83042116B5FD00FE9F53 /* IBDesignables.swift in Sources */,
 				C566FF11211679F400560379 /* AppDelegate.swift in Sources */,
 				C55D83062116B60300FE9F53 /* MusicTImerViewController.swift in Sources */,
 				C566FF252116A0E100560379 /* Constants.swift in Sources */,
+				C55D83102116C81A00FE9F53 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

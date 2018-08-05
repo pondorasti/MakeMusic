@@ -22,8 +22,6 @@ class ViewController: UIViewController {
 //            
 //            player?.play()
 //        }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
