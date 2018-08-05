@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1ECBFA6E79E726D4E492DCB0 /* Pods_MakeMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDD19B7C1348D43CF9435 /* Pods_MakeMusic.framework */; };
+		4434AEB02116B9B900DCDEE0 /* MusicPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */; };
+		4434AEB22116B9CB00DCDEE0 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434AEB12116B9CB00DCDEE0 /* Util.swift */; };
+		4434AEB42116C07800DCDEE0 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434AEB32116C07800DCDEE0 /* ChatCell.swift */; };
 		C55D83022116B5D700FE9F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55D83012116B5D700FE9F53 /* Main.storyboard */; };
 		C55D83042116B5FD00FE9F53 /* IBDesignables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83032116B5FD00FE9F53 /* IBDesignables.swift */; };
 		C55D83062116B60300FE9F53 /* MusicTImerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83052116B60300FE9F53 /* MusicTImerViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayViewController.swift; sourceTree = "<group>"; };
+		4434AEB12116B9CB00DCDEE0 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		4434AEB32116C07800DCDEE0 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		4E1FDD19B7C1348D43CF9435 /* Pods_MakeMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55D83012116B5D700FE9F53 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C55D83032116B5FD00FE9F53 /* IBDesignables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignables.swift; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				C55D83032116B5FD00FE9F53 /* IBDesignables.swift */,
+				4434AEB32116C07800DCDEE0 /* ChatCell.swift */,
 				C55D83012116B5D700FE9F53 /* Main.storyboard */,
 				C55D83092116B60E00FE9F53 /* LaunchScreen.storyboard */,
 				C55D830F2116C81A00FE9F53 /* TagView.swift */,
@@ -120,6 +127,7 @@
 				C566FF12211679F400560379 /* ViewController.swift */,
 				C55D83052116B60300FE9F53 /* MusicTImerViewController.swift */,
 				C55D83072116B60800FE9F53 /* LoginViewController.swift */,
+				4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -262,6 +270,8 @@
 				C55D83042116B5FD00FE9F53 /* IBDesignables.swift in Sources */,
 				C566FF11211679F400560379 /* AppDelegate.swift in Sources */,
 				C55D83062116B60300FE9F53 /* MusicTImerViewController.swift in Sources */,
+				4434AEB22116B9CB00DCDEE0 /* Util.swift in Sources */,
+				4434AEB02116B9B900DCDEE0 /* MusicPlayViewController.swift in Sources */,
 				C566FF252116A0E100560379 /* Constants.swift in Sources */,
 				C55D83102116C81A00FE9F53 /* TagView.swift in Sources */,
 			);
@@ -390,13 +400,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UALV34MRH2;
+				DEVELOPMENT_TEAM = 2SU5299JX4;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingbytes.MakeMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingbytes.MakeMusic2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,13 +419,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UALV34MRH2;
+				DEVELOPMENT_TEAM = 2SU5299JX4;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codingbytes.MakeMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codingbytes.MakeMusic2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
