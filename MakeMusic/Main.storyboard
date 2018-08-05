@@ -95,6 +95,7 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="appleMusicTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="995-cT-bwu"/>
+                                                                    <segue destination="8e9-mj-U1y" kind="show" id="WlY-uM-dx3"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -155,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="-65" y="32"/>
         </scene>
         <!--MusicT Imer View Controller-->
         <scene sceneID="ijb-Pu-UFT">
@@ -513,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqx-ma-Y65" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="31.934032983508249"/>
+            <point key="canvasLocation" x="1577" y="32"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="biC-Ph-PsH">
@@ -563,47 +564,6 @@
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9E-r9-6Ql" userLabel="Back Container" customClass="GradientView" customModule="MakeMusic" customModuleProvider="target">
-                                <rect key="frame" x="67" y="579" width="241" height="56"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9C-2R-qdT">
-                                        <rect key="frame" x="0.0" y="0.5" width="241" height="56"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                        <state key="normal" title="Back to Music">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="appleMusicTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHv-Ml-xMI"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="BJi-6d-JAO"/>
-                                    <constraint firstAttribute="trailing" secondItem="Z9C-2R-qdT" secondAttribute="trailing" id="Du2-KM-1hv"/>
-                                    <constraint firstAttribute="height" constant="56" id="YrY-4Q-zk3"/>
-                                    <constraint firstAttribute="bottom" secondItem="Z9C-2R-qdT" secondAttribute="bottom" id="aYU-fM-y9S"/>
-                                    <constraint firstItem="Z9C-2R-qdT" firstAttribute="leading" secondItem="B9E-r9-6Ql" secondAttribute="leading" id="cla-Wo-39j"/>
-                                    <constraint firstItem="Z9C-2R-qdT" firstAttribute="top" secondItem="B9E-r9-6Ql" secondAttribute="top" id="p3Q-lF-pex"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.59607843137254901" green="0.38039215686274508" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="28"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uf4-Vn-eW7">
                                 <rect key="frame" x="24" y="174" width="327" height="199"/>
                                 <subviews>
@@ -700,18 +660,103 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ZTT-LV-PAL">
+                                <rect key="frame" x="67" y="498" width="241" height="137"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvT-ae-z1P" userLabel="Back Container" customClass="GradientView" customModule="MakeMusic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="241" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpt-wW-bpZ">
+                                                <rect key="frame" x="0.0" y="0.5" width="241" height="56"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                <state key="normal" title="Letter from Artist">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="appleMusicTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h9b-u6-H6F"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="fpt-wW-bpZ" firstAttribute="leading" secondItem="tvT-ae-z1P" secondAttribute="leading" id="Ie3-7x-5ek"/>
+                                            <constraint firstAttribute="height" constant="56" id="Lwh-WE-KOX"/>
+                                            <constraint firstItem="fpt-wW-bpZ" firstAttribute="top" secondItem="tvT-ae-z1P" secondAttribute="top" id="bdE-Gv-kts"/>
+                                            <constraint firstAttribute="bottom" secondItem="fpt-wW-bpZ" secondAttribute="bottom" id="hoD-hL-jc3"/>
+                                            <constraint firstAttribute="trailing" secondItem="fpt-wW-bpZ" secondAttribute="trailing" id="yfp-nO-BGV"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9E-r9-6Ql" userLabel="Back Container" customClass="GradientView" customModule="MakeMusic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="81" width="241" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9C-2R-qdT">
+                                                <rect key="frame" x="0.0" y="0.5" width="241" height="56"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                <state key="normal" title="Back to Music">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="appleMusicTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHv-Ml-xMI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Z9C-2R-qdT" secondAttribute="trailing" id="Du2-KM-1hv"/>
+                                            <constraint firstAttribute="height" constant="56" id="YrY-4Q-zk3"/>
+                                            <constraint firstAttribute="bottom" secondItem="Z9C-2R-qdT" secondAttribute="bottom" id="aYU-fM-y9S"/>
+                                            <constraint firstItem="Z9C-2R-qdT" firstAttribute="leading" secondItem="B9E-r9-6Ql" secondAttribute="leading" id="cla-Wo-39j"/>
+                                            <constraint firstItem="Z9C-2R-qdT" firstAttribute="top" secondItem="B9E-r9-6Ql" secondAttribute="top" id="p3Q-lF-pex"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.59607843137254901" green="0.38039215686274508" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.14157450894494952" green="0.11922575839976245" blue="0.1641224118098159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="0uh-9n-hXh" firstAttribute="top" secondItem="PfN-IU-aKI" secondAttribute="top" id="0Tw-4G-f9f"/>
-                            <constraint firstItem="B9E-r9-6Ql" firstAttribute="leading" secondItem="5Hf-9T-gnF" secondAttribute="leading" constant="67" id="Akz-7i-KWt"/>
-                            <constraint firstItem="5Hf-9T-gnF" firstAttribute="trailing" secondItem="B9E-r9-6Ql" secondAttribute="trailing" constant="67" id="CCS-Kc-eOv"/>
                             <constraint firstItem="0uh-9n-hXh" firstAttribute="leading" secondItem="5Hf-9T-gnF" secondAttribute="leading" id="D9j-VR-gxp"/>
                             <constraint firstItem="uf4-Vn-eW7" firstAttribute="top" secondItem="0uh-9n-hXh" secondAttribute="bottom" constant="24" id="Da1-9Z-5Ea"/>
                             <constraint firstItem="eGT-XA-ai5" firstAttribute="top" secondItem="PfN-IU-aKI" secondAttribute="top" id="FnJ-NY-FhL"/>
+                            <constraint firstItem="5Hf-9T-gnF" firstAttribute="bottom" secondItem="ZTT-LV-PAL" secondAttribute="bottom" constant="32" id="OS8-Jp-dB4"/>
+                            <constraint firstItem="ZTT-LV-PAL" firstAttribute="leading" secondItem="5Hf-9T-gnF" secondAttribute="leading" constant="67" id="UB3-dz-hAC"/>
+                            <constraint firstItem="5Hf-9T-gnF" firstAttribute="trailing" secondItem="ZTT-LV-PAL" secondAttribute="trailing" constant="67" id="Vk2-LV-RfG"/>
                             <constraint firstItem="0uh-9n-hXh" firstAttribute="trailing" secondItem="5Hf-9T-gnF" secondAttribute="trailing" id="W7m-Q5-N1r"/>
                             <constraint firstItem="eGT-XA-ai5" firstAttribute="trailing" secondItem="5Hf-9T-gnF" secondAttribute="trailing" id="XjE-1M-yR1"/>
-                            <constraint firstItem="5Hf-9T-gnF" firstAttribute="bottom" secondItem="B9E-r9-6Ql" secondAttribute="bottom" constant="32" id="YVs-lx-JJf"/>
                             <constraint firstItem="eGT-XA-ai5" firstAttribute="leading" secondItem="5Hf-9T-gnF" secondAttribute="leading" id="bv7-5F-WKa"/>
                             <constraint firstItem="5Hf-9T-gnF" firstAttribute="trailing" secondItem="uf4-Vn-eW7" secondAttribute="trailing" constant="24" id="i4k-go-Tid"/>
                             <constraint firstItem="uf4-Vn-eW7" firstAttribute="leading" secondItem="5Hf-9T-gnF" secondAttribute="leading" constant="24" id="qad-5Q-6Oa"/>
@@ -730,4 +775,7 @@
         <image name="albumCover" width="800" height="800"/>
         <image name="sent-mail" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WlY-uM-dx3"/>
+    </inferredMetricsTieBreakers>
 </document>
