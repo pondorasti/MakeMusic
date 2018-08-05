@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -723,11 +724,12 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9C-2R-qdT">
                                                 <rect key="frame" x="0.0" y="0.66666666666662877" width="327" height="56"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                                <state key="normal" title="Back to Music">
+                                                <state key="normal" title="Recomendation">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="appleMusicTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHv-Ml-xMI"/>
+                                                    <segue destination="hNI-5U-xS4" kind="presentation" id="M2j-iy-9IU"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -935,14 +937,317 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxo-Zz-N8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hld-v1-3cu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3244" y="35.467980295566505"/>
+            <point key="canvasLocation" x="1951" y="800"/>
+        </scene>
+        <!--Music Recomendation View Controller-->
+        <scene sceneID="xh9-ww-VOS">
+            <objects>
+                <viewController id="hNI-5U-xS4" customClass="MusicRecomendationViewController" customModule="MakeMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AqK-Mp-wri">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aD0-GN-Cks">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-SC-RZH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="270.66666666666669"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stoney" translatesAutoresizingMaskIntoConstraints="NO" id="V16-gF-gyw">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="270.66666666666669"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nx8-nV-h1C">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="270.66666666666669"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-EL-tF4">
+                                                        <rect key="frame" x="133.66666666666666" y="83" width="108" height="104.66666666666669"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stoney" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz7-Sw-QhQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="44"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Malone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5U-ZH-zEp">
+                                                                <rect key="frame" x="3.3333333333333428" y="44" width="101.66666666666667" height="24.666666666666671"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="y6h-uL-l1Z">
+                                                                <rect key="frame" x="17" y="68.666666666666657" width="74.333333333333329" height="36"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvx-qv-Pzy" customClass="GradientView" customModule="MakeMusic" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcj-wr-szw">
+                                                                                <rect key="frame" x="3" y="3" width="30" height="30"/>
+                                                                                <state key="normal" title="🔥"/>
+                                                                                <connections>
+                                                                                    <action selector="music1FireTapped:" destination="hNI-5U-xS4" eventType="touchUpInside" id="WVO-pf-Oa7"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.42633522730000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="36" id="HR9-jw-vrO"/>
+                                                                            <constraint firstItem="fcj-wr-szw" firstAttribute="centerX" secondItem="rvx-qv-Pzy" secondAttribute="centerX" id="QH3-wu-8H0"/>
+                                                                            <constraint firstItem="fcj-wr-szw" firstAttribute="centerY" secondItem="rvx-qv-Pzy" secondAttribute="centerY" id="h1I-ID-rjs"/>
+                                                                            <constraint firstAttribute="width" constant="36" id="qiN-4r-q03"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="18"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="121" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEQ-SQ-pMq">
+                                                                        <rect key="frame" x="42" y="5.6666666666666874" width="32.333333333333343" height="24.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                                        <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.61180397730000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="O3Z-EL-tF4" firstAttribute="centerX" secondItem="Nx8-nV-h1C" secondAttribute="centerX" id="0p6-sV-zEb"/>
+                                                    <constraint firstItem="O3Z-EL-tF4" firstAttribute="centerY" secondItem="Nx8-nV-h1C" secondAttribute="centerY" id="Ndz-IC-Drh"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="V16-gF-gyw" secondAttribute="trailing" id="Isf-rG-U6Z"/>
+                                            <constraint firstAttribute="bottom" secondItem="Nx8-nV-h1C" secondAttribute="bottom" id="Spb-v5-hXP"/>
+                                            <constraint firstItem="V16-gF-gyw" firstAttribute="top" secondItem="8JI-SC-RZH" secondAttribute="top" id="aRe-W6-DIH"/>
+                                            <constraint firstItem="Nx8-nV-h1C" firstAttribute="leading" secondItem="8JI-SC-RZH" secondAttribute="leading" id="nNC-oF-BPK"/>
+                                            <constraint firstItem="Nx8-nV-h1C" firstAttribute="top" secondItem="8JI-SC-RZH" secondAttribute="top" id="rJS-Ig-lLI"/>
+                                            <constraint firstItem="V16-gF-gyw" firstAttribute="leading" secondItem="8JI-SC-RZH" secondAttribute="leading" id="tRz-8X-2iz"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nx8-nV-h1C" secondAttribute="trailing" id="ti1-Xx-tKT"/>
+                                            <constraint firstAttribute="bottom" secondItem="V16-gF-gyw" secondAttribute="bottom" id="xZU-QC-oEg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVG-JG-vrr">
+                                        <rect key="frame" x="0.0" y="270.66666666666663" width="375" height="270.66666666666663"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orange" translatesAutoresizingMaskIntoConstraints="NO" id="djQ-oK-GX9">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="270.66666666666669"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAg-BC-tk5">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="270.66666666666669"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Unp-nV-7IO">
+                                                        <rect key="frame" x="129" y="83" width="117.66666666666669" height="104.66666666666669"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8j-WX-bJp">
+                                                                <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="44"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frank Ocean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCa-G7-Ha5">
+                                                                <rect key="frame" x="6.6666666666666572" y="44" width="104.66666666666667" height="24.666666666666671"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="nNr-EP-Yko">
+                                                                <rect key="frame" x="26.999999999999996" y="68.666666666666629" width="63.666666666666657" height="36"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lim-jt-vLR" customClass="GradientView" customModule="MakeMusic" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmn-o6-ybD">
+                                                                                <rect key="frame" x="3" y="3" width="30" height="30"/>
+                                                                                <state key="normal" title="🔥"/>
+                                                                                <connections>
+                                                                                    <action selector="music2FireTapped:" destination="hNI-5U-xS4" eventType="touchUpInside" id="ANR-dT-Rf6"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.42633522730000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="vmn-o6-ybD" firstAttribute="centerY" secondItem="Lim-jt-vLR" secondAttribute="centerY" id="5Oq-dC-HaT"/>
+                                                                            <constraint firstAttribute="height" constant="36" id="D0V-Se-TZ4"/>
+                                                                            <constraint firstAttribute="width" constant="36" id="E9Z-lU-eIj"/>
+                                                                            <constraint firstItem="vmn-o6-ybD" firstAttribute="centerX" secondItem="Lim-jt-vLR" secondAttribute="centerX" id="ilj-ud-Gpi"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="18"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS3-bJ-tdV">
+                                                                        <rect key="frame" x="42" y="5.6666666666666874" width="21.666666666666671" height="24.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                                        <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.61180397730000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Unp-nV-7IO" firstAttribute="centerY" secondItem="OAg-BC-tk5" secondAttribute="centerY" id="BMG-8j-YSL"/>
+                                                    <constraint firstItem="Unp-nV-7IO" firstAttribute="centerX" secondItem="OAg-BC-tk5" secondAttribute="centerX" id="l35-Ni-19h"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="djQ-oK-GX9" secondAttribute="trailing" id="3tl-2W-dV4"/>
+                                            <constraint firstItem="djQ-oK-GX9" firstAttribute="top" secondItem="oVG-JG-vrr" secondAttribute="top" id="4sE-lM-BBk"/>
+                                            <constraint firstItem="OAg-BC-tk5" firstAttribute="leading" secondItem="oVG-JG-vrr" secondAttribute="leading" id="EYJ-aR-Z0k"/>
+                                            <constraint firstItem="OAg-BC-tk5" firstAttribute="top" secondItem="oVG-JG-vrr" secondAttribute="top" id="IDl-4g-bKo"/>
+                                            <constraint firstAttribute="bottom" secondItem="OAg-BC-tk5" secondAttribute="bottom" id="KMp-9u-0Zf"/>
+                                            <constraint firstAttribute="bottom" secondItem="djQ-oK-GX9" secondAttribute="bottom" id="WJF-nq-S6E"/>
+                                            <constraint firstItem="djQ-oK-GX9" firstAttribute="leading" secondItem="oVG-JG-vrr" secondAttribute="leading" id="mMh-2D-RTv"/>
+                                            <constraint firstAttribute="trailing" secondItem="OAg-BC-tk5" secondAttribute="trailing" id="sai-Ic-mQX"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccB-mo-n3R">
+                                        <rect key="frame" x="0.0" y="541.33333333333337" width="375" height="270.66666666666663"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pretty Girls Like Trap Music" translatesAutoresizingMaskIntoConstraints="NO" id="E9W-AT-CJr">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="270.66666666666669"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tft-D7-K2a">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="270.66666666666669"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rXs-aa-dkj">
+                                                        <rect key="frame" x="31.666666666666657" y="88.666666666666629" width="312" height="93.666666666666686"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pretty Girls Like Trap Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8W5-bm-CNS">
+                                                                <rect key="frame" x="0.0" y="0.0" width="312" height="33"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Chainz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yW-4V-KHB">
+                                                                <rect key="frame" x="120" y="33" width="72" height="24.666666666666671"/>
+                                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZlI-nO-kxP">
+                                                                <rect key="frame" x="124.33333333333333" y="57.666666666666629" width="63.666666666666671" height="36"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgP-tt-pk8" customClass="GradientView" customModule="MakeMusic" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                        <subviews>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drb-qY-qcU">
+                                                                                <rect key="frame" x="3" y="3" width="30" height="30"/>
+                                                                                <state key="normal" title="🔥"/>
+                                                                                <connections>
+                                                                                    <action selector="music3FireTapped:" destination="hNI-5U-xS4" eventType="touchUpInside" id="zrd-W3-6MW"/>
+                                                                                </connections>
+                                                                            </button>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.42633522730000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="Drb-qY-qcU" firstAttribute="centerY" secondItem="PgP-tt-pk8" secondAttribute="centerY" id="0xy-s7-Xg8"/>
+                                                                            <constraint firstAttribute="width" constant="36" id="8d8-Vi-8in"/>
+                                                                            <constraint firstAttribute="height" constant="36" id="sqH-wh-rKo"/>
+                                                                            <constraint firstItem="Drb-qY-qcU" firstAttribute="centerX" secondItem="PgP-tt-pk8" secondAttribute="centerX" id="tzM-PD-v36"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="18"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKg-Hl-ghE">
+                                                                        <rect key="frame" x="42" y="5.6666666666667442" width="21.666666666666671" height="24.666666666666671"/>
+                                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                                        <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.61180397730000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="rXs-aa-dkj" firstAttribute="centerY" secondItem="tft-D7-K2a" secondAttribute="centerY" id="2Zu-vk-Nga"/>
+                                                    <constraint firstItem="rXs-aa-dkj" firstAttribute="centerX" secondItem="tft-D7-K2a" secondAttribute="centerX" id="hNe-UO-Fj6"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="E9W-AT-CJr" firstAttribute="top" secondItem="ccB-mo-n3R" secondAttribute="top" id="010-wY-JfC"/>
+                                            <constraint firstAttribute="trailing" secondItem="tft-D7-K2a" secondAttribute="trailing" id="8Gi-4g-LnT"/>
+                                            <constraint firstItem="tft-D7-K2a" firstAttribute="top" secondItem="ccB-mo-n3R" secondAttribute="top" id="Eer-ma-p8p"/>
+                                            <constraint firstAttribute="trailing" secondItem="E9W-AT-CJr" secondAttribute="trailing" id="GQI-Ft-ecb"/>
+                                            <constraint firstAttribute="bottom" secondItem="E9W-AT-CJr" secondAttribute="bottom" id="ZSn-1k-wFU"/>
+                                            <constraint firstItem="E9W-AT-CJr" firstAttribute="leading" secondItem="ccB-mo-n3R" secondAttribute="leading" id="ZfY-M8-eNd"/>
+                                            <constraint firstAttribute="bottom" secondItem="tft-D7-K2a" secondAttribute="bottom" id="ezf-EF-cYt"/>
+                                            <constraint firstItem="tft-D7-K2a" firstAttribute="leading" secondItem="ccB-mo-n3R" secondAttribute="leading" id="tc3-Id-dnb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="aD0-GN-Cks" secondAttribute="bottom" id="2wH-KS-bxh"/>
+                            <constraint firstItem="aD0-GN-Cks" firstAttribute="trailing" secondItem="CTd-FD-BUT" secondAttribute="trailing" id="BIc-fF-Vv5"/>
+                            <constraint firstItem="aD0-GN-Cks" firstAttribute="leading" secondItem="CTd-FD-BUT" secondAttribute="leading" id="PwP-yE-7Zo"/>
+                            <constraint firstItem="aD0-GN-Cks" firstAttribute="top" secondItem="AqK-Mp-wri" secondAttribute="top" id="wNu-N8-taL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CTd-FD-BUT"/>
+                    </view>
+                    <connections>
+                        <outlet property="music1Artist" destination="s5U-ZH-zEp" id="kLF-Hh-rvA"/>
+                        <outlet property="music1Counter" destination="qEQ-SQ-pMq" id="NBN-rx-Nd9"/>
+                        <outlet property="music1Title" destination="Zz7-Sw-QhQ" id="Nhr-vD-G3n"/>
+                        <outlet property="music2Artist" destination="LCa-G7-Ha5" id="E8r-4J-SMa"/>
+                        <outlet property="music2Counter" destination="gS3-bJ-tdV" id="jSF-es-8Nv"/>
+                        <outlet property="music2Title" destination="M8j-WX-bJp" id="Gtd-4y-Oi1"/>
+                        <outlet property="music3Artist" destination="2yW-4V-KHB" id="tby-iM-2nv"/>
+                        <outlet property="music3Counter" destination="uKg-Hl-ghE" id="cTG-as-aPV"/>
+                        <outlet property="music3Title" destination="8W5-bm-CNS" id="WHb-ha-bV9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VH-yD-tui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="800"/>
         </scene>
     </scenes>
     <resources>
         <image name="Gradient" width="731" height="1298"/>
         <image name="Logo" width="533" height="128"/>
+        <image name="Pretty Girls Like Trap Music" width="268" height="268"/>
         <image name="albumCover" width="800" height="800"/>
+        <image name="orange" width="600" height="600"/>
         <image name="sent-mail" width="512" height="512"/>
+        <image name="stoney" width="220" height="220"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WlY-uM-dx3"/>
