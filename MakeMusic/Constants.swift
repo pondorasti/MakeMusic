@@ -11,7 +11,7 @@ import UIKit
 
 struct Constant {
     struct Music {
-        static let songURL: String = "https://stream.svc.7digital.net/stream/catalogue?oauth_consumer_key=7d4vr6cgb392&oauth_nonce=211776127&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1533484763&oauth_version=1.0&shopId=2020&trackId=1271215&oauth_signature=exNODfEloRS9Ws6h3w0OJoNDihg%3D"
+        static let songURL: String = "https://stream.svc.7digital.net/stream/catalogue?oauth_consumer_key=7d4vr6cgb392&oauth_nonce=451996263&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1533490418&oauth_version=1.0&shopId=2020&trackId=1271215&oauth_signature=786A5snhdi182b0SOce8WsApsRY%3D"
         
         static let tags: [String] = []
         static let messages: [Message] = [Message(text: "I am so so hyped for this!!!!!", timeStamp: 0, username: "shushu88"),

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1ECBFA6E79E726D4E492DCB0 /* Pods_MakeMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDD19B7C1348D43CF9435 /* Pods_MakeMusic.framework */; };
-		440460B22117635A0011849A /* Letter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440460B12117635A0011849A /* Letter.storyboard */; };
 		440460B4211766330011849A /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440460B3211766330011849A /* LetterViewController.swift */; };
 		4434AEB02116B9B900DCDEE0 /* MusicPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */; };
 		C55D83022116B5D700FE9F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55D83012116B5D700FE9F53 /* Main.storyboard */; };
@@ -21,6 +20,7 @@
 		C55D83142116D81D00FE9F53 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83132116D81D00FE9F53 /* Util.swift */; };
 		C55D83152116D8C400FE9F53 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434AEB32116C07800DCDEE0 /* ChatCell.swift */; };
 		C55D83172116DFD000FE9F53 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83162116DFD000FE9F53 /* Message.swift */; };
+		C55D831921176B2600FE9F53 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D831821176B2600FE9F53 /* ResultsViewController.swift */; };
 		C566FF11211679F400560379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566FF10211679F400560379 /* AppDelegate.swift */; };
 		C566FF13211679F400560379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566FF12211679F400560379 /* ViewController.swift */; };
 		C566FF18211679F500560379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C566FF17211679F500560379 /* Assets.xcassets */; };
@@ -29,7 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		440460B12117635A0011849A /* Letter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Letter.storyboard; sourceTree = "<group>"; };
 		440460B3211766330011849A /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
 		4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayViewController.swift; sourceTree = "<group>"; };
 		4434AEB12116B9CB00DCDEE0 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		C55D830F2116C81A00FE9F53 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		C55D83132116D81D00FE9F53 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		C55D83162116DFD000FE9F53 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C55D831821176B2600FE9F53 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C566FF0D211679F400560379 /* MakeMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C566FF10211679F400560379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C566FF12211679F400560379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +132,6 @@
 			children = (
 				C55D83032116B5FD00FE9F53 /* IBDesignables.swift */,
 				4434AEB32116C07800DCDEE0 /* ChatCell.swift */,
-				440460B12117635A0011849A /* Letter.storyboard */,
 				C55D83012116B5D700FE9F53 /* Main.storyboard */,
 				C55D83092116B60E00FE9F53 /* LaunchScreen.storyboard */,
 				C55D830F2116C81A00FE9F53 /* TagView.swift */,
@@ -148,6 +147,7 @@
 				C55D83072116B60800FE9F53 /* LoginViewController.swift */,
 				4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */,
 				440460B3211766330011849A /* LetterViewController.swift */,
+				C55D831821176B2600FE9F53 /* ResultsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -229,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				440460B22117635A0011849A /* Letter.storyboard in Resources */,
 				C55D830A2116B60E00FE9F53 /* LaunchScreen.storyboard in Resources */,
 				C55D83022116B5D700FE9F53 /* Main.storyboard in Resources */,
 				C566FF18211679F500560379 /* Assets.xcassets in Resources */,
@@ -292,6 +291,7 @@
 				C55D83042116B5FD00FE9F53 /* IBDesignables.swift in Sources */,
 				C566FF11211679F400560379 /* AppDelegate.swift in Sources */,
 				C55D83062116B60300FE9F53 /* MusicTImerViewController.swift in Sources */,
+				C55D831921176B2600FE9F53 /* ResultsViewController.swift in Sources */,
 				C55D83142116D81D00FE9F53 /* Util.swift in Sources */,
 				C55D83172116DFD000FE9F53 /* Message.swift in Sources */,
 				4434AEB02116B9B900DCDEE0 /* MusicPlayViewController.swift in Sources */,

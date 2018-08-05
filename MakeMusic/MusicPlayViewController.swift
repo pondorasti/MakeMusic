@@ -128,6 +128,9 @@ class MusicPlayViewController: UIViewController {
     }
     
     @IBAction func sendButtonTapped(_ sender: Any) {
+        guard let text = messageField.text, text != "" else { return }
+        messageField.text = ""
+        createTag(withText: text)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
