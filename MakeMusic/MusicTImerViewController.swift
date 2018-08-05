@@ -25,12 +25,20 @@ class MusicTImerViewController: UIViewController {
     
     var timer = Timer()
     var seconds = Constant.countDown
+    var player: AVPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timerLabel.text = "00:00:\(Constant.countDown)"
 
         blur(imageView: bgImage)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        
+        if let url = URL(string: Constant.Music.songURL) {
+            let playerItem: AVPlayerItem = AVPlayerItem(url: url)
+            player = AVPlayer(playerItem: playerItem)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,13 +47,9 @@ class MusicTImerViewController: UIViewController {
         switch id {
         case "toMusicPlay":
             guard let destination = segue.destination as? MusicPlayViewController else { return }
+            destination.player = player
+            destination.player?.play()
             
-            if let url = URL(string: Constant.Music.songURL) {
-                let playerItem: AVPlayerItem = AVPlayerItem(url: url)
-                destination.player = AVPlayer(playerItem: playerItem)
-                
-                destination.player?.play()
-            }
             
         default:
             fatalError("unknown id")
@@ -70,9 +74,9 @@ class MusicTImerViewController: UIViewController {
         if progress <=  1 {
             let spacing = view.frame.height * (1 - progress)
             self.timerBarTopConstraint.constant = spacing
-            UIView.animate(withDuration: TimeInterval(Constant.countDown)) {
+            UIView.animate(withDuration: TimeInterval(Constant.countDown), delay: 0, options: [.curveLinear], animations: {
                 self.view.layoutIfNeeded()
-            }
+            }, completion: nil)
         }
     }
     

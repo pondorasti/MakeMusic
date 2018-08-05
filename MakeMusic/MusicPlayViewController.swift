@@ -43,6 +43,13 @@ class MusicPlayViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(30)) {
+            self.performSegue(withIdentifier: "showStats", sender: self)
+            //TODO: stop music
+        }
+    }
+    
     @objc func updateTimer() {
         if currentSecond < 1 {
             timer.invalidate()
@@ -78,19 +85,20 @@ class MusicPlayViewController: UIViewController {
         tagViews.append(newTag)
         tagViews.last?.animate()
         
-        if tagViews.count == 4 {
+        if tagViews.count >= 4 {
             tagViews.first?.destroy()
+            tagViews.remove(at: 0)
         }
     }
     
     func findSpot() -> CGPoint {
         
         while true {
-            let startX = 25
-            let endX = 225
+            let startX = 0
+            let endX = 250
             
-            let startY = 25
-            let endY = 275
+            let startY = 0
+            let endY = 300
             
             let xRange = startX...endX
             let yRange = startY...endY

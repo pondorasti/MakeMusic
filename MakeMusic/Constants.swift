@@ -11,7 +11,7 @@ import UIKit
 
 struct Constant {
     struct Music {
-        static let songURL: String = "https://stream.svc.7digital.net/stream/catalogue?oauth_consumer_key=7d4vr6cgb392&oauth_nonce=515418888&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1533435724&oauth_version=1.0&shopId=2020&trackId=4510643&oauth_signature=T9TaKGrg24gvb2YREcUdnsx0iEw%3D"
+        static let songURL: String = "https://stream.svc.7digital.net/stream/catalogue?oauth_consumer_key=7d4vr6cgb392&oauth_nonce=211776127&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1533484763&oauth_version=1.0&shopId=2020&trackId=1271215&oauth_signature=exNODfEloRS9Ws6h3w0OJoNDihg%3D"
         
         static let tags: [String] = []
         static let messages: [Message] = [Message(text: "I am so so hyped for this!!!!!", timeStamp: 0, username: "shushu88"),
@@ -29,7 +29,7 @@ struct Constant {
                                         Message(text: "poof", timeStamp: 50, username: "88rising")]
     }
     
-    static let countDown: Int = 1
+    static let countDown: Int = 20
     
     struct Tag {
         static let width: CGFloat = 100
