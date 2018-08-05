@@ -8,23 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1ECBFA6E79E726D4E492DCB0 /* Pods_MakeMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDD19B7C1348D43CF9435 /* Pods_MakeMusic.framework */; };
+		C55D83022116B5D700FE9F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55D83012116B5D700FE9F53 /* Main.storyboard */; };
+		C55D83042116B5FD00FE9F53 /* IBDesignables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83032116B5FD00FE9F53 /* IBDesignables.swift */; };
+		C55D83062116B60300FE9F53 /* MusicTImerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83052116B60300FE9F53 /* MusicTImerViewController.swift */; };
+		C55D83082116B60800FE9F53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83072116B60800FE9F53 /* LoginViewController.swift */; };
+		C55D830A2116B60E00FE9F53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55D83092116B60E00FE9F53 /* LaunchScreen.storyboard */; };
 		C566FF11211679F400560379 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566FF10211679F400560379 /* AppDelegate.swift */; };
 		C566FF13211679F400560379 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566FF12211679F400560379 /* ViewController.swift */; };
-		C566FF16211679F400560379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C566FF14211679F400560379 /* Main.storyboard */; };
 		C566FF18211679F500560379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C566FF17211679F500560379 /* Assets.xcassets */; };
-		C566FF1B211679F500560379 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C566FF19211679F500560379 /* LaunchScreen.storyboard */; };
 		C566FF2321169F2C00560379 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566FF2221169F2C00560379 /* MusicService.swift */; };
 		C566FF252116A0E100560379 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C566FF242116A0E100560379 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E1FDD19B7C1348D43CF9435 /* Pods_MakeMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakeMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C55D83012116B5D700FE9F53 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C55D83032116B5FD00FE9F53 /* IBDesignables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignables.swift; sourceTree = "<group>"; };
+		C55D83052116B60300FE9F53 /* MusicTImerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTImerViewController.swift; sourceTree = "<group>"; };
+		C55D83072116B60800FE9F53 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C55D83092116B60E00FE9F53 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C566FF0D211679F400560379 /* MakeMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C566FF10211679F400560379 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C566FF12211679F400560379 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C566FF15211679F400560379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C566FF17211679F500560379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MakeMusic/Assets.xcassets; sourceTree = "<group>"; };
-		C566FF1A211679F500560379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C566FF1C211679F500560379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C566FF2221169F2C00560379 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
 		C566FF242116A0E100560379 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -95,8 +101,9 @@
 		C566FF282116B02F00560379 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C566FF19211679F500560379 /* LaunchScreen.storyboard */,
-				C566FF14211679F400560379 /* Main.storyboard */,
+				C55D83032116B5FD00FE9F53 /* IBDesignables.swift */,
+				C55D83012116B5D700FE9F53 /* Main.storyboard */,
+				C55D83092116B60E00FE9F53 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -105,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				C566FF12211679F400560379 /* ViewController.swift */,
+				C55D83052116B60300FE9F53 /* MusicTImerViewController.swift */,
+				C55D83072116B60800FE9F53 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -186,9 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C566FF1B211679F500560379 /* LaunchScreen.storyboard in Resources */,
+				C55D830A2116B60E00FE9F53 /* LaunchScreen.storyboard in Resources */,
+				C55D83022116B5D700FE9F53 /* Main.storyboard in Resources */,
 				C566FF18211679F500560379 /* Assets.xcassets in Resources */,
-				C566FF16211679F400560379 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,33 +249,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55D83082116B60800FE9F53 /* LoginViewController.swift in Sources */,
 				C566FF13211679F400560379 /* ViewController.swift in Sources */,
 				C566FF2321169F2C00560379 /* MusicService.swift in Sources */,
+				C55D83042116B5FD00FE9F53 /* IBDesignables.swift in Sources */,
 				C566FF11211679F400560379 /* AppDelegate.swift in Sources */,
+				C55D83062116B60300FE9F53 /* MusicTImerViewController.swift in Sources */,
 				C566FF252116A0E100560379 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C566FF14211679F400560379 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C566FF15211679F400560379 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C566FF19211679F500560379 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C566FF1A211679F500560379 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C566FF1D211679F500560379 /* Debug */ = {
@@ -390,7 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UALV34MRH2;
-				INFOPLIST_FILE = MakeMusic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UALV34MRH2;
-				INFOPLIST_FILE = MakeMusic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
