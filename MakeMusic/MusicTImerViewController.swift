@@ -16,7 +16,7 @@ class MusicTImerViewController: UIViewController {
     @IBOutlet weak var musicTitle: UILabel!
     @IBOutlet weak var musicArtist: UILabel!
     
-    @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var timerBar: UIView!
     
@@ -25,7 +25,7 @@ class MusicTImerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        blur(imageView: bgImage)
+        Util.blur(imageView: bgImage)
         
         setTimerBar(progress: 0.5)
         
@@ -43,23 +43,6 @@ class MusicTImerViewController: UIViewController {
             let spacing = view.frame.height * progress
             timerBarTopConstraint.constant = spacing
         }
-    }
-    
-    var context = CIContext(options: nil)
-    func blur(imageView: UIImageView) {
-        let currentFilter = CIFilter(name: "CIGaussianBlur")
-        let beginImage = CIImage(image: imageView.image!)
-        currentFilter!.setValue(beginImage, forKey: kCIInputImageKey)
-        currentFilter!.setValue(30, forKey: kCIInputRadiusKey)
-        
-        let cropFilter = CIFilter(name: "CICrop")
-        cropFilter!.setValue(currentFilter!.outputImage, forKey: kCIInputImageKey)
-        cropFilter!.setValue(CIVector(cgRect: beginImage!.extent), forKey: "inputRectangle")
-        
-        let output = cropFilter!.outputImage
-        let cgimg = context.createCGImage(output!, from: output!.extent)
-        let processedImage = UIImage(cgImage: cgimg!)
-        imageView.image = processedImage
     }
 
     /*
