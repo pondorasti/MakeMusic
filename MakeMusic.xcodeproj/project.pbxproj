@@ -10,6 +10,7 @@
 		1ECBFA6E79E726D4E492DCB0 /* Pods_MakeMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1FDD19B7C1348D43CF9435 /* Pods_MakeMusic.framework */; };
 		440460B22117635A0011849A /* Letter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 440460B12117635A0011849A /* Letter.storyboard */; };
 		440460B4211766330011849A /* LetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440460B3211766330011849A /* LetterViewController.swift */; };
+		440460B62117745F0011849A /* MusicRecomendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440460B52117745F0011849A /* MusicRecomendationViewController.swift */; };
 		4434AEB02116B9B900DCDEE0 /* MusicPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */; };
 		C55D83022116B5D700FE9F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55D83012116B5D700FE9F53 /* Main.storyboard */; };
 		C55D83042116B5FD00FE9F53 /* IBDesignables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83032116B5FD00FE9F53 /* IBDesignables.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		440460B12117635A0011849A /* Letter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Letter.storyboard; sourceTree = "<group>"; };
 		440460B3211766330011849A /* LetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterViewController.swift; sourceTree = "<group>"; };
+		440460B52117745F0011849A /* MusicRecomendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRecomendationViewController.swift; sourceTree = "<group>"; };
 		4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayViewController.swift; sourceTree = "<group>"; };
 		4434AEB12116B9CB00DCDEE0 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4434AEB32116C07800DCDEE0 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				C566FF12211679F400560379 /* ViewController.swift */,
+				440460B52117745F0011849A /* MusicRecomendationViewController.swift */,
 				C55D83052116B60300FE9F53 /* MusicTImerViewController.swift */,
 				C55D83072116B60800FE9F53 /* LoginViewController.swift */,
 				4434AEAF2116B9B900DCDEE0 /* MusicPlayViewController.swift */,
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C55D83152116D8C400FE9F53 /* ChatCell.swift in Sources */,
+				440460B62117745F0011849A /* MusicRecomendationViewController.swift in Sources */,
 				C55D83082116B60800FE9F53 /* LoginViewController.swift in Sources */,
 				C566FF13211679F400560379 /* ViewController.swift in Sources */,
 				C566FF2321169F2C00560379 /* MusicService.swift in Sources */,
