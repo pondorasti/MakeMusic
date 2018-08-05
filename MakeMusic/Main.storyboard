@@ -165,7 +165,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleCover_DeleteLater" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-D8-J1K">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="albumCover" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-D8-J1K">
                                 <rect key="frame" x="-10" y="-10" width="395" height="687"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.49616477272727272" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -196,7 +196,7 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SampleCover_DeleteLater" translatesAutoresizingMaskIntoConstraints="NO" id="TgL-FR-l78">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="albumCover" translatesAutoresizingMaskIntoConstraints="NO" id="TgL-FR-l78">
                                                 <rect key="frame" x="0.0" y="112.5" width="260.5" height="260"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="260" id="jsU-Kj-Xh0"/>
@@ -265,6 +265,6 @@
     <resources>
         <image name="Gradient" width="731" height="1298"/>
         <image name="Logo" width="533" height="128"/>
-        <image name="SampleCover_DeleteLater" width="930" height="930"/>
+        <image name="albumCover" width="800" height="800"/>
     </resources>
 </document>
