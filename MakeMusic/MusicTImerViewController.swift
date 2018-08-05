@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class MusicTImerViewController: UIViewController {
 
@@ -30,14 +31,32 @@ class MusicTImerViewController: UIViewController {
 
         blur(imageView: bgImage)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let id = segue.identifier else { return }
         
-        TagView(with: "Alex", in: self)
+        switch id {
+        case "toMusicPlay":
+            guard let destination = segue.destination as? MusicPlayViewController else { return }
+            
+            if let url = URL(string: Constant.Music.songURL) {
+                let playerItem: AVPlayerItem = AVPlayerItem(url: url)
+                destination.player = AVPlayer(playerItem: playerItem)
+                
+                destination.player?.play()
+            }
+            
+        default:
+            fatalError("unknown id")
+        }
     }
     
     @objc func updateTimer() {
         if seconds < 1 {
             timer.invalidate()
             //TODO: perform segue to next screen
+            performSegue(withIdentifier: "toMusicPlay", sender: self)
         } else {
             seconds -= 1
             if seconds == Constant.countDown - 1 {

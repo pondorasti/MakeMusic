@@ -180,16 +180,6 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmD-VO-KvG">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-TE-j4K">
-                                                <rect key="frame" x="8" y="196" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <connections>
-                                                    <segue destination="ocH-H3-nNp" kind="show" id="vj7-tG-7sy"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25629261363636363" colorSpace="custom" customColorSpace="displayP3"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="9Kc-wT-ZSW">
@@ -270,6 +260,7 @@
                         <outlet property="timerBar" destination="RmD-VO-KvG" id="Sc7-km-pZj"/>
                         <outlet property="timerBarTopConstraint" destination="WYP-cw-2bQ" id="Wd2-br-fsk"/>
                         <outlet property="timerLabel" destination="HHI-bP-Ep8" id="0Ua-SV-WS7"/>
+                        <segue destination="ocH-H3-nNp" kind="show" identifier="toMusicPlay" id="HAc-Zr-GMy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HW0-kO-PgF" userLabel="First Responder" sceneMemberID="firstResponder"/>

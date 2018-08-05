@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class MusicPlayViewController: UIViewController {
 
@@ -18,22 +19,96 @@ class MusicPlayViewController: UIViewController {
     @IBOutlet weak var musicTitle: UILabel!
     @IBOutlet weak var musicArtist: UILabel!
     
-    //var lastKeyboardHeight = CGFloat(0.0)
+    var numberOfCellsToShow = 0
+    var currentTime = 0
+    var timer = Timer()
+    var currentSecond = 30
+    var player: AVPlayer?
+    var tagViews = [TagView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
     }
+    
+    @objc func updateTimer() {
+        if currentSecond < 1 {
+            timer.invalidate()
+            //TODO: perform segue to next screen
+            
+        } else {
+            currentSecond -= 1
+            currentTime += 1
+            if Constant.Music.messages[numberOfCellsToShow + 1].timeStamp <= currentTime {
+                numberOfCellsToShow += 1
+                tagHashTag(for: Constant.Music.messages[numberOfCellsToShow].text)
+                chatTable.reloadData()
+                chatTable.scrollToBottom()
+            }
+        }
+    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tagHashTag(for string: String) {
+        let arrayOfWords = string.components(separatedBy: " ")
+        for word in arrayOfWords {
+            if word.first == "#" {
+                createTag(withText: word)
+                return
+            }
+        }
+    }
+    
+    func createTag(withText text: String) {
+        let position = findSpot()
+        let newTag = TagView(with: text, in: self, at: position)
+        newTag.layer.zPosition = 10
+        coverImage.addSubview(newTag)
+        tagViews.append(newTag)
+        tagViews.last?.animate()
+        
+        if tagViews.count == 4 {
+            tagViews.first?.destroy()
+        }
+    }
+    
+    func findSpot() -> CGPoint {
+        
+        while true {
+            let startX = 25
+            let endX = 225
+            
+            let startY = 25
+            let endY = 275
+            
+            let xRange = startX...endX
+            let yRange = startY...endY
+            let position = CGPoint.randomPoint(inXRange: xRange, andYRange: yRange)
+            
+            let frame = CGRect(x: position.x, y: position.y, width: Constant.Tag.width, height: Constant.Tag.height)
+            
+            var goodPoint = true
+            
+            for tag in tagViews where goodPoint == true {
+                if tag.frame.intersects(frame) {
+                    goodPoint = false
+                }
+            }
+            
+            if goodPoint {
+                return position
+            }
+        }
+        
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,15 +138,18 @@ class MusicPlayViewController: UIViewController {
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         messageField.resignFirstResponder()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: coverImage)
+        
+        for tag in tagViews {
+            if tag.frame.contains(location) {
+                tag.animateTap()
+                return
+            }
+        }
     }
-    */
 
 }
 
@@ -81,11 +159,12 @@ extension MusicPlayViewController: UITableViewDelegate {
 
 extension MusicPlayViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return numberOfCellsToShow + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chatCell = chatTable.dequeueReusableCell(withIdentifier: "chatCell") as! ChatCell
+        chatCell.messageLabel.text = Constant.Music.messages[indexPath.row].text
         return chatCell
     }
     

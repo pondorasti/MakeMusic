@@ -11,17 +11,12 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var player: AVPlayer?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if let url = URL(string: Constant.Music.songURL) {
-//            let playerItem: AVPlayerItem = AVPlayerItem(url: url)
-//            player = AVPlayer(playerItem: playerItem)
-//            
-//            player?.play()
-//        }
+
     }
 
     override func didReceiveMemoryWarning() {

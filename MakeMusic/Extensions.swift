@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CoreGraphics
+import UIKit
 
 extension CGPoint {
     func length() -> CGFloat {
@@ -41,6 +41,24 @@ extension TimeInterval {
         let minutes = Int(self) / 60 % 60
         let seconds = Int(self) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
+}
+
+extension UITableView {
+    func scrollToBottom() {
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(
+                row: self.numberOfRows(inSection: self.numberOfSections - 1) - 1,
+                section: self.numberOfSections - 1)
+            self.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    
+    func scrollToTop() {
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: 0, section: 0)
+            self.scrollToRow(at: indexPath, at: .top, animated: false)
+        }
     }
 }
 
