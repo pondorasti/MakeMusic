@@ -19,6 +19,9 @@ class MusicPlayViewController: UIViewController {
     @IBOutlet weak var musicTitle: UILabel!
     @IBOutlet weak var musicArtist: UILabel!
     
+    @IBOutlet weak var chatButtonSpacing: NSLayoutConstraint!
+    
+    //var lastKeyboardHeight = CGFloat(0.0)
     var numberOfCellsToShow = 0
     var currentTime = 0
     var timer = Timer()
@@ -121,17 +124,21 @@ class MusicPlayViewController: UIViewController {
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= keyboardSize.height
-            }
+            UIView.animate(withDuration: 0.2, animations: {
+                self.chatButtonSpacing.constant += 291.0//keyboardSize.height
+                self.view.layoutIfNeeded()
+            })
+            print(keyboardSize.height)
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += keyboardSize.height
-            }
+            UIView.animate(withDuration: 0.2, animations: {
+                self.chatButtonSpacing.constant -= 291.0//keyboardSize.height
+                self.view.layoutIfNeeded()
+            })
+            print(keyboardSize.height)
         }
     }
     
