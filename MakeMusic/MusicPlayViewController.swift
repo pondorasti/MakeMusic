@@ -26,7 +26,7 @@ class MusicPlayViewController: UIViewController {
     var currentTime = 0
     var timer = Timer()
     var currentSecond = 30
-    var player: AVPlayer?
+    var player: AVAudioPlayer?
     var tagViews = [TagView]()
     
     override func viewDidLoad() {
@@ -46,6 +46,7 @@ class MusicPlayViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(30)) {
             self.performSegue(withIdentifier: "showStats", sender: self)
+            self.player?.pause()
             //TODO: stop music
         }
     }

@@ -25,7 +25,7 @@ class MusicTImerViewController: UIViewController {
     
     var timer = Timer()
     var seconds = Constant.countDown
-    var player: AVPlayer?
+    var player: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +35,23 @@ class MusicTImerViewController: UIViewController {
         blur(imageView: bgImage)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         
-        if let url = URL(string: Constant.Music.songURL) {
-            let playerItem: AVPlayerItem = AVPlayerItem(url: url)
-            player = AVPlayer(playerItem: playerItem)
+//        if let url = URL(string: Constant.Music.songURL) {
+//            let playerItem: AVPlayerItem = AVPlayerItem(url: url)
+//            player = AVPlayer(playerItem: playerItem)
+//        }
+        
+        guard let url = Bundle.main.url(forResource: "Stronger", withExtension: "mp3") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url)
+            
+//            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
     
