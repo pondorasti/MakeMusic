@@ -29,3 +29,14 @@ and give feedback. Live comments and tags will be displayed, and users can press
 
 - Finalist
 - Sponsor Winner - Universal Magic Group
+
+## Screenshots
+
+<p align="center">
+    <img src="https://github.com/Pondorasti/MakeMusic/blob/master/Screenshots/IMG_2590.PNG" width="400">
+    <img src="https://github.com/Pondorasti/MakeMusic/blob/master/Screenshots/IMG_2591.PNG" width="400">
+    <img src="https://github.com/Pondorasti/MakeMusic/blob/master/Screenshots/IMG_2593.PNG" width="400">
+    <img src="https://github.com/Pondorasti/MakeMusic/blob/master/Screenshots/IMG_2594.PNG" width="400">
+    <img src="https://github.com/Pondorasti/MakeMusic/blob/master/Screenshots/IMG_2595.PNG" width="400">
+    <img src="https://github.com/Pondorasti/MakeMusic/blob/master/Screenshots/IMG_2596.PNG" width="400">
+</p>
