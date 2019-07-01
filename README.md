@@ -27,8 +27,8 @@ and give feedback. Live comments and tags will be displayed, and users can press
 
 ## Awards
 
-- Finalist
-- Sponsor Winner - Universal Magic Group
+- Finalist - pitched to judges including the editor of TechCrunch, the founder of Twitch, and the founder of Square.
+- Sponsor Winner - Universal Music Group
 
 ## Screenshots
 
