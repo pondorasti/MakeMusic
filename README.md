@@ -28,7 +28,7 @@ and give feedback. Live comments and tags will be displayed, and users can press
 ## Awards
 
 - Finalist - pitched to judges including the editor of TechCrunch, the founder of Twitch, and the founder of Square.
-- Sponsor Winner - Universal Music Group
+- Sponsor Winner - Universal Music Group - best use of their API
 
 ## Screenshots
 
