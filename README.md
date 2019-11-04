@@ -5,11 +5,11 @@ OutsideHacks 24h Hackathon iOS app
 
 ## Team
 
-- [Alexandru Turcanu](https://github.com/Pondorasti)
-- [Shutaro Aoyama](https://github.com/Shu-pro)
-- [Alex Niehaus](https://github.com/alex00x0?tab=repositories)
-- [Gabrielle Chang](https://github.com/gabbiechang)
-- [Noah Woodward](https://github.com/woodward4422)
+- [Alexandru Turcanu](https://github.com/Pondorasti) - iOS Back End Development & User Experiences
+- [Shutaro Aoyama](https://github.com/Shu-pro) - iOS Front End Development
+- [Alex Niehaus](https://github.com/alex00x0?tab=repositories) - Presenter & Business Plan
+- [Gabrielle Chang](https://github.com/gabbiechang) - Website builder
+- [Noah Woodward](https://github.com/woodward4422) - Presenter & Marketing
 
 ## About
 
